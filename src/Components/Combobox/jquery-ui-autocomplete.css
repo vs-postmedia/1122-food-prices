@@ -1,0 +1,24 @@
+#filters .custom-combobox {
+  position: relative;
+  display: inline-block;
+}
+#filters .custom-combobox-toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+  padding: 0;
+}
+#filters .custom-combobox-input {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+#filters .custom-combobox-input {
+  font-family: 'BentonSansCond-RegItalic';
+}
+
+.ui-widget.ui-widget-content {
+  max-height: 300px;
+  overflow-y: auto;
+}
