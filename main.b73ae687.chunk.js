@@ -239,7 +239,7 @@ const categories = ["🪥  Bathroom items", "☕️  Beverages", "🧀  Dairy", 
 // CONCATENATED MODULE: ./src/data/params.js
 const params = {
   appId: 'app',
-  agencyId: 'dp-121',
+  categoryId: 'dp-121',
   // find in the data page of your cloudtables dataset
   clientId: 'food-prices',
   // unique for each dataset
@@ -351,8 +351,9 @@ function assignServer(serverPool) {
 function comboboxChangeHandler(e) {
   // reset container dom element
   $('.cloudtables')[0].textContent = '';
-  const category = e.target.value.slice(3);
-  console.log(category);
+
+  // strip the emojis
+  const category = e.target.value.slice(4);
 
   // reload the table with selected agency filtered
   const filterValue = e.target.value === 'All foods' ? null : category;
@@ -371,14 +372,14 @@ function createAgencyComboBox(agenciesList) {
   });
   $('#combobox').append(agenciesString);
 }
-async function loadCloudTable(agency) {
+async function loadCloudTable(filterValue) {
   let conditionsArray = [{
-    id: data_params.agencyId,
-    value: agency
+    id: data_params.categoryId,
+    value: filterValue
   }];
 
   // if the filter has been selected, filter for those options, otherwise show everything (null)
-  let conditions = agency ? conditionsArray : null;
+  let conditions = filterValue ? conditionsArray : null;
 
   // grab the ct api instance
   let api = new CloudTablesApi_default.a(data_params.apiKey, {
@@ -386,22 +387,17 @@ async function loadCloudTable(agency) {
     // Client's name - optional
     domain: server,
     // CloudTables host
-    // domain: params.cloudTableDomain,       // Your CloudTables host
-    // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
-    // ssl: false,               // Disable https
     conditions: conditions // Use this to filter table
   });
   console.log("https://".concat(server, "/io/loader/").concat(data_params.cloudTableId, "/table/d"));
   // get a cloudtables api token
   let token = await api.token();
-  console.log('CloudTables token:', token);
   // build the script tag for the table
   let script = document.createElement('script');
   script.src = "https://".concat(server, "/io/loader/").concat(data_params.cloudTableId, "/table/d");
   script.setAttribute('data-token', token);
   script.setAttribute('data-insert', data_params.tableId);
   script.setAttribute('data-clientId', data_params.clientId);
-  script.onerror = e => console.error('CloudTables script failed to load:', e);
 
   // insert the script tag to load the table
   let app = document.getElementById(data_params.appId).appendChild(script);
