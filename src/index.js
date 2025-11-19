@@ -1,6 +1,6 @@
 import CloudTablesApi from 'cloudtables-api';
 import Combobox from './Components/Combobox/Combobox.js';
-import agenciesList from './data/agencies.js';
+import categories from './data/categories.js';
 import params from './data/params.js';
 
 // CSS
@@ -33,7 +33,7 @@ const init = async () => {
     server = params.cloudTableDomain;
 
     // create dynamic list of options for agency select tag
-    createAgencyComboBox(agenciesList);
+    createAgencyComboBox(categories);
 
     // create combobox filter for agencies
     Combobox('#combobox');
@@ -69,8 +69,11 @@ function comboboxChangeHandler(e) {
     // reset container dom element
     $('.cloudtables')[0].textContent = '';
 
+    // strip the emojis
+    const category = e.target.value.slice(4);
+
     // reload the table with selected agency filtered
-    const filterValue = e.target.value === 'All agencies' ? null : e.target.value;
+    const filterValue = e.target.value === 'All foods' ? null : category;
 
     // reload table
     loadCloudTable(filterValue);
@@ -81,7 +84,7 @@ function createAgencyComboBox(agenciesList) {
 
     // sort our list
     const list = agenciesList.sort();
-    list.unshift('All agencies');
+    list.unshift('All foods');
 
     list.forEach(d => {
         agenciesString += `<option value='${d}'>${d}</option>`;
@@ -90,24 +93,21 @@ function createAgencyComboBox(agenciesList) {
     $('#combobox').append(agenciesString);
 }
 
-async function loadCloudTable(agency) {
+async function loadCloudTable(filterValue) {
     let conditionsArray = [
         {
-            id: params.agencyId, 
-            value: agency
+            id: params.categoryId, 
+            value: filterValue
         }
     ];
 
     // if the filter has been selected, filter for those options, otherwise show everything (null)
-    let conditions = agency ? conditionsArray : null;
+    let conditions = filterValue ? conditionsArray : null;
 
     // grab the ct api instance
     let api = new CloudTablesApi(params.apiKey, {
         clientName: params.clientId,     // Client's name - optional
         domain: server,                 // CloudTables host
-        // domain: params.cloudTableDomain,       // Your CloudTables host
-        // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
-        // ssl: false,               // Disable https
         conditions: conditions      // Use this to filter table
     });
 
@@ -121,6 +121,7 @@ async function loadCloudTable(agency) {
     script.setAttribute('data-token', token);
     script.setAttribute('data-insert', params.tableId);
     script.setAttribute('data-clientId', params.clientId);
+
 
     // insert the script tag to load the table
     let app = document.getElementById(params.appId).appendChild(script);
