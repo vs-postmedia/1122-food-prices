@@ -1,51 +1,23 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 140:
+/***/ 144:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 142:
+/***/ 146:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 156:
+/***/ 160:
 /***/ (function(module, exports) {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 197:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 198:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 199:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 200:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -71,6 +43,34 @@
 /***/ }),
 
 /***/ 204:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 205:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 206:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 207:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78,32 +78,35 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.sort.js
-var es_array_sort = __webpack_require__(100);
+var es_array_sort = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
 var es_regexp_exec = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
-var es_string_replace = __webpack_require__(126);
+var es_string_replace = __webpack_require__(127);
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.trim.js
+var es_string_trim = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/esnext.string.replace-all.js
-var esnext_string_replace_all = __webpack_require__(133);
+var esnext_string_replace_all = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./node_modules/cloudtables-api/dist/CloudTablesApi.js
-var CloudTablesApi = __webpack_require__(98);
+var CloudTablesApi = __webpack_require__(100);
 var CloudTablesApi_default = /*#__PURE__*/__webpack_require__.n(CloudTablesApi);
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.constructor.js
-var es_regexp_constructor = __webpack_require__(188);
+var es_regexp_constructor = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/Components/Combobox/jquery-ui-autocomplete.css
-var jquery_ui_autocomplete = __webpack_require__(197);
+var jquery_ui_autocomplete = __webpack_require__(201);
 
 // CONCATENATED MODULE: ./src/Components/Combobox/Combobox.js
 
 
 
-function setupAgencyCombobox(combobox) {
+function setupCombobox(combobox) {
   // combobox setup
   $(function () {
     $.widget('custom.combobox', {
@@ -238,7 +241,7 @@ function setupAgencyCombobox(combobox) {
     $(combobox).combobox();
   });
 }
-/* harmony default export */ var Combobox = (setupAgencyCombobox);
+/* harmony default export */ var Combobox = (setupCombobox);
 // CONCATENATED MODULE: ./src/data/time-series.js
 const timeSeries = [{
   "item": "Almonds",
@@ -434,12 +437,6 @@ const timeSeries = [{
   "data": [5.54, 5.65, 5.75, 5.79, 5.75, 5.43, 5.53, 5.92, 5.84, 5.82, 5.65, 5.58, 5.87, 5.86, 5.84, 6.04, 5.75, 5.76, 5.64, 5.85, 5.45, 5.54, 5.68, 5.84, 5.84, 5.85, 6.05, 6.41, 5.68, 6.01, 6.01, 6.03, 5.74, 5.87, 6.01, 6.04, 6.08, 6.19, 6.15, 6.27, 6.14, 6.28, 6.23, 5.98, 6.2, 6.41, 6.31, 6.42, 6.6, 6.33, 6.4, 6.35, 6.57, 6.62, 6.61, 6.8, 6.68, 6.82, 6.78, 6.79, 6.92]
 }, {
   "item": "Milk",
-  "data": [2.45, 2.46, 2.47, 2.48, 2.48, 2.54, 2.53, 2.53, 2.53, 2.54, 2.55, 2.56, 2.55, 2.56, 2.57, 2.56, 2.56, 2.75, 2.74, 2.75, 2.76, 2.76, 2.75, 2.76, 2.87, 2.85, 2.87, 2.88, 2.86, 2.95, 2.96, 2.95, 2.96, 2.96, 2.96, 2.96, 2.95, 2.96, 2.93, 2.96, 2.89, 2.74, 2.91, 2.91, 2.96, 2.98, 2.97, 2.99, 2.98, 2.97, 2.98, 2.96, 2.95, 3.01, 3.03, 3.02, 3.04, 3.03, 3.03, 3.06, 3.06]
-}, {
-  "item": "Milk",
-  "data": [4.25, 4.29, 4.27, 4.25, 4.22, 4.39, 4.42, 4.42, 4.39, 4.41, 4.43, 4.45, 4.43, 4.41, 4.45, 4.46, 4.39, 4.75, 4.76, 4.75, 4.75, 4.76, 4.73, 4.77, 4.94, 4.95, 4.93, 5.01, 4.95, 5.1, 5.16, 5.15, 5.1, 5.17, 5.18, 5.17, 5.17, 5.18, 5.19, 5.2, 5.23, 5.08, 5.17, 5.2, 5.25, 5.3, 5.29, 5.33, 5.32, 5.3, 5.34, 5.34, 5.36, 5.42, 5.41, 5.42, 5.44, 5.44, 5.44, 5.52, 5.5]
-}, {
-  "item": "Milk",
   "data": [4.86, 4.88, 4.86, 4.84, 4.84, 5.03, 5.01, 5.03, 5.02, 5.02, 5.01, 5.03, 4.99, 5.04, 5.07, 5.05, 5.02, 5.56, 5.59, 5.57, 5.56, 5.56, 5.52, 5.53, 5.82, 5.8, 5.82, 5.85, 5.84, 5.99, 5.99, 5.99, 5.98, 5.93, 5.82, 5.79, 5.79, 5.79, 5.79, 5.8, 5.73, 5.74, 5.75, 5.78, 5.9, 5.9, 5.88, 5.89, 5.89, 5.89, 5.9, 5.9, 5.9, 6.05, 6.05, 6.04, 6.08, 6.06, 6.05, 6.08, 6.08]
 }, {
   "item": "Mushrooms",
@@ -590,30 +587,33 @@ const params = {
   cloudTableDomain: 'vs-postmedia-a.cloudtables.me',
   // should probably have 3-4 servers in the pool...
   serverPool: ['vs-postmedia-a.cloudtables.me'],
-  apiKey: 'L0Qx2dDFz0EX2BhyHvzvxt7y' // RW
-  // apiKey: 'kcZqiHL7MiUCi1waLZYN1vkz' // read-only
+  // apiKey: 'L0Qx2dDFz0EX2BhyHvzvxt7y' // RW
+  apiKey: 'kcZqiHL7MiUCi1waLZYN1vkz' // read-only
 };
 /* harmony default export */ var data_params = (params);
+// CONCATENATED MODULE: ./src/data/foods.js
+const foods = ["Almonds", "Apple juice", "Apples", "Avocado", "Baby food", "Bacon", "Bananas", "Beef rib cuts", "Beef stewing cuts", "Beef striploin cuts", "Beef top sirloin cuts", "Block cheese", "Broccoli", "Brown rice", "Butter", "Cabbage", "Canned baked beans", "Canned beans and lentils", "Canned corn", "Canned peach", "Canned pear", "Canned salmon", "Canned soup", "Canned tomatoes", "Canned tuna", "Canola oil", "Cantaloupe", "Carrots", "Celery", "Cereal", "Chicken breasts", "Chicken drumsticks", "Chicken thigh", "Cookies and sweet biscuits", "Crackers and crisp breads", "Cream", "Cucumber", "Deodorant", "Dried lentils", "Dry beans and legumes", "Dry or fresh pasta", "Eggs", "Flatbread and pita", "Frozen broccoli", "Frozen corn", "Frozen french fried potatoes", "Frozen green beans", "Frozen mixed vegetables", "Frozen peas", "Frozen pizza", "Frozen spinach", "Frozen strawberries", "Grapes", "Ground beef", "Hummus", "Iceberg lettuce", "Infant formula", "Ketchup", "Laundry detergent", "Lemons", "Limes", "Margarine", "Mayonnaise", "Meatless burgers", "Milk", "Mushrooms", "Nut milk", "Olive oil", "Onions", "Onions", "Orange juice", "Oranges", "Oranges", "Pasta sauce", "Peanut butter", "Peanuts", "Pears", "Peppers", "Pork loin cuts", "Pork rib cuts", "Pork shoulder cuts", "Potatoes", "Potatoes", "Roasted or ground coffee", "Romaine lettuce", "Salad dressing", "Salad greens", "Salmon", "Salsa", "Shampoo", "Shrimp", "Soy milk", "Squash", "Strawberries", "Sunflower seeds", "Sweet potatoes", "Tea (20 bags)", "Tofu", "Tomatoes", "Toothpaste", "Vegetable oil", "Wheat flour", "White bread", "White rice", "White sugar", "Whole chicken", "Wieners", "Yogurt"];
+/* harmony default export */ var data_foods = (foods);
 // EXTERNAL MODULE: ./node_modules/sparklines/source/sparkline.mjs
-var source_sparkline = __webpack_require__(99);
+var source_sparkline = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(198);
+var normalize = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/css/postmedia.css
-var postmedia = __webpack_require__(199);
+var postmedia = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(200);
+var colors = __webpack_require__(204);
 
 // EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(201);
+var fonts = __webpack_require__(205);
 
 // EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(202);
+var main = __webpack_require__(206);
 
 // EXTERNAL MODULE: ./src/css/cloudtable.css
-var cloudtable = __webpack_require__(203);
+var cloudtable = __webpack_require__(207);
 
 // CONCATENATED MODULE: ./src/fonts/Shift-Bold.otf
 /* harmony default export */ var Shift_Bold = (__webpack_require__.p + "assets/Shift-Bold.8c454d7e.otf");
@@ -626,6 +626,8 @@ var cloudtable = __webpack_require__(203);
 // CONCATENATED MODULE: ./src/fonts/BentonSansCond-Bold.otf
 /* harmony default export */ var BentonSansCond_Bold = (__webpack_require__.p + "assets/BentonSansCond-Bold.87a66dcd.otf");
 // CONCATENATED MODULE: ./src/index.js
+
+
 
 
 
@@ -668,18 +670,17 @@ const sparklineOptions = {
 
 // JS FUNCTIONS
 const init = async () => {
-  // assign server - HACK!!! DISABLE WHEN TRAFFIC DROPS
-  // serverPool = params.serverPool;
-  // server = await assignServer(serverPool);
-
   server = data_params.cloudTableDomain;
 
-  // create dynamic list of options for agency select tag
-  createAgencyComboBox(data_categories);
+  // create dynamic list of options for comboboxes
+  createComboBox(data_categories, '#combobox', '🍽️ All food groups 🍽️');
 
-  // create combobox filter for agencies
+  // create combobox filter for data
+  $(document).on('change', '#combobox', comboboxChangeHandler);
   Combobox('#combobox');
-  $('#combobox').change(comboboxChangeHandler);
+
+  // custom search box
+  addSearchBox();
 
   // load the unfiltered cloudtable
   loadCloudTable('');
@@ -687,26 +688,62 @@ const init = async () => {
   // add sparklines
   addSparklines(time_series);
 };
+function addSearchBox() {
+  // wait for ct
+  document.addEventListener('ct-ready', e => {
+    const ct = e.table;
+    const table = ct.table();
+
+    //  Create the input element above the table
+    const container = table.table().container();
+    const searchBox = document.createElement('input');
+    searchBox.className = 'searchbox';
+    searchBox.type = 'text';
+    searchBox.placeholder = 'Lookup a food...';
+    container.parentNode.insertBefore(searchBox, container);
+
+    // On draw, hide rows that don’t match the search term
+    table.on('draw', () => {
+      const searchTerm = searchBox.value.trim().toLowerCase();
+      table.rows().every(function () {
+        const rowData = this.data();
+        let match = true;
+        if (searchTerm) {
+          try {
+            const productArray = JSON.parse(rowData['dp-119']);
+            const productText = productArray[0].text.toLowerCase();
+            match = productText.includes(searchTerm);
+          } catch (e) {
+            match = false;
+          }
+        }
+
+        // Hide or show the row
+        $(this.node()).toggle(match);
+      });
+    });
+
+    // Add input event listener to filter the table
+    searchBox.addEventListener('input', () => {
+      // const val = searchBox.value;
+      // table.column(productColIndex).search(val).draw();
+      table.draw();
+      // console.log(val)
+    });
+  });
+}
 function addSparklines(timeSeries) {
   // wait for ct
   document.addEventListener('ct-ready', e => {
     const ct = e.table;
     const table = ct.table();
 
-    // console.log('CT object:', ct);
-    // console.log('DT columns:', table.columns().dataSrc());
-    // console.log('DT rows:', table.rows())
-
     // wait for the table data to load
     table.on('draw', () => {
       // loop through all rows & print products column
       table.rows().every(function () {
         const product = JSON.parse(this.data()['dp-119'])[0].text;
-        console.log(product);
         const timeseries = this.data()['dp-128'];
-        console.log(timeseries);
-
-        // const data = timeSeries.filter(d => d.item === product)[0];
 
         // Find the matching time series
         const data = timeSeries.find(d => d.item === product);
@@ -715,22 +752,17 @@ function addSparklines(timeSeries) {
         const chartIndex = table.columns().indexes().filter(i => table.column(i).dataSrc() === 'dp-128')[0];
         const cell = this.cell(this.index(), chartIndex).node();
 
-        // Add your span to the cell
+        // Add div to cell for sparkline
         if (data) {
           const id = "".concat(product.toLowerCase().replaceAll(' ', '-'), "-container");
           const span = document.createElement('div');
           span.setAttribute('id', id); // optional
           cell.appendChild(span);
-          console.log(product, data.data);
           drawSparkline(id, data.data);
         }
       });
     });
   });
-}
-function drawSparkline(id, data) {
-  const sparkline = new source_sparkline["a" /* default */](document.getElementById(id), sparklineOptions);
-  sparkline.draw(data);
 }
 
 // super-hack "load balancer"
@@ -755,6 +787,7 @@ function assignServer(serverPool) {
   return server;
 }
 function comboboxChangeHandler(e) {
+  console.log('COMBO');
   // reset container dom element
   $('.cloudtables')[0].textContent = '';
 
@@ -762,28 +795,33 @@ function comboboxChangeHandler(e) {
   const category = e.target.value.slice(4);
 
   // reload the table with selected agency filtered
-  const filterValue = e.target.value === 'All foods' ? null : category;
+  const filterValue = e.target.value === '🍽️ All food groups 🍽️' ? null : category;
 
-  // reload table
-  loadCloudTable(filterValue);
-}
-function createAgencyComboBox(agenciesList) {
-  let agenciesString = '';
-
-  // sort our list
-  const list = agenciesList.sort();
-  list.unshift('All foods');
-  list.forEach(d => {
-    agenciesString += "<option value='".concat(d, "'>").concat(d, "</option>");
-  });
-  $('#combobox').append(agenciesString);
-}
-async function loadCloudTable(filterValue) {
-  let conditionsArray = [{
+  // create filter condition for the "dp-119" column
+  let conditions = filterValue ? [{
     id: data_params.categoryId,
     value: filterValue
-  }];
+  }] : null;
 
+  // reload table
+  loadCloudTable(filterValue, conditions);
+}
+function createComboBox(data, el, label) {
+  let string = '';
+
+  // sort our list
+  const list = data.sort();
+  list.unshift(label);
+  list.forEach(d => {
+    string += "<option value='".concat(d, "'>").concat(d, "</option>");
+  });
+  $(el).append(string);
+}
+function drawSparkline(id, data) {
+  const sparkline = new source_sparkline["a" /* default */](document.getElementById(id), sparklineOptions);
+  sparkline.draw(data);
+}
+async function loadCloudTable(filterValue, conditionsArray) {
   // if the filter has been selected, filter for those options, otherwise show everything (null)
   let conditions = filterValue ? conditionsArray : null;
 
@@ -795,7 +833,8 @@ async function loadCloudTable(filterValue) {
     // CloudTables host
     conditions: conditions // Use this to filter table
   });
-  console.log("https://".concat(server, "/io/loader/").concat(data_params.cloudTableId, "/table/d"));
+
+  // console.log(`https://${server}/io/loader/${params.cloudTableId}/table/d`)
   // get a cloudtables api token
   let token = await api.token();
   // build the script tag for the table
@@ -814,4 +853,4 @@ init();
 
 /***/ })
 
-},[[204,1,2]]]);
+},[[208,1,2]]]);
