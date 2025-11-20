@@ -662,7 +662,7 @@ const sparklineOptions = {
   endColor: '#0062A3',
   height: 25,
   lineColor: '#0062A3',
-  width: 125
+  width: 100
   // tooltip: function(value, index, array) {
   //     console.log(value)
   // }
