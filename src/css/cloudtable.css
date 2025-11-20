@@ -4,6 +4,16 @@
     padding: 10px 0 0 0;
 }
 
+.cloudtables__table {
+    margin-top: 25px;
+}
+
+.cloudtables__table > input[type='text'] {
+    font-family: 'BentonSansCond-Regular';
+    padding: 4px 8px;
+    width: 200px;
+}
+
 /* SEARCH BAR */
 #app .cloudtables .dataTables_filter {
     text-align: left;
@@ -11,8 +21,8 @@
 
 #filter-agency-label,
 #app .cloudtables .dataTables_filter label {
-    font-family: 'BentonSansCond-Bold';
-    font-size: 1.1rem;
+    /* font-family: 'BentonSansCond-Bold'; */
+    font-size: 1rem;
 }
 #app .cloudtables div.dataTables_wrapper .dataTables_filter input {
     font-family: 'BentonSansCond-RegItalic';
@@ -43,6 +53,7 @@
 #app div.cloudtables table.dataTable th.dtr-control {
     padding: 0 25px 0 0;
 }
+
 
 /* TABLE DETAILS */
 #app table.dataTable.dtr-column>tbody>tr>td.dtr-control:before {

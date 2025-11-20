@@ -10,7 +10,8 @@ const params = {
     serverPool: [
         'vs-postmedia-a.cloudtables.me'
     ],
-    apiKey: 'kcZqiHL7MiUCi1waLZYN1vkz' // read-only    
+    // apiKey: 'L0Qx2dDFz0EX2BhyHvzvxt7y' // RW
+    apiKey: 'kcZqiHL7MiUCi1waLZYN1vkz' // read-only
 };
 
 export default params;

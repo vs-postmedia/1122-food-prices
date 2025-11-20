@@ -1,4 +1,7 @@
 /* POSTMEDIA STYLES */
+#app header {
+	margin-bottom: 25px;
+}
 #app h1 {
 	color: var(--black);
 	font-family: Shift-BoldItalic, serif;
@@ -30,12 +33,13 @@
 #app footer {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 15px;
 }
 
 #app footer > p {
 	flex: 1;
 }
-#app footer .note {
+#app footer .source {
 	color: var(--grey02);
 	flex: 0 0 100%;
 	font-family: BentonSansCond-RegItalic, italic;

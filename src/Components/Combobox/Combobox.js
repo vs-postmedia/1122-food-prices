@@ -1,6 +1,6 @@
 import autocomplete from './jquery-ui-autocomplete.css';
 
-function setupAgencyCombobox(combobox) {
+function setupCombobox(combobox) {
     // combobox setup
     $(function() {
         $.widget('custom.combobox', {
@@ -162,4 +162,4 @@ function setupAgencyCombobox(combobox) {
         $(combobox).combobox();
     });
 }
-export default setupAgencyCombobox;
+export default setupCombobox;
