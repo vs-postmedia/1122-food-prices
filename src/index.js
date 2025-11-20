@@ -31,9 +31,9 @@ const sparklineOptions = {
     height: 25,
     lineColor: '#0062A3',
     width: 125,
-    tooltip: function(value, index, array) {
-        console.log(value)
-    }
+    // tooltip: function(value, index, array) {
+    //     console.log(value)
+    // }
 };
 
 // JS FUNCTIONS
